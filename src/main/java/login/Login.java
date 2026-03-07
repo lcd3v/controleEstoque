@@ -4,6 +4,7 @@
  */
 package login;
 
+import connection.ConectionFactory;
 import jakarta.servlet.ServletException; // trata erros relacionados ao servLet
 import jakarta.servlet.annotation.WebServlet; // permite mapear a URL do servLet
 import jakarta.servlet.http.HttpServlet; // classe base para criar  servLets HTTP
@@ -11,6 +12,8 @@ import jakarta.servlet.http.HttpServletRequest; // requisição do cliente
 import jakarta.servlet.http.HttpServletResponse; // resposta do servidor
 import java.io.IOException; // trata erros de entrada e de saída
 import java.io.PrintWriter; // permite escrever respostas em HTML
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 @WebServlet("/login") // caminho de acesso da classe
 public class Login extends HttpServlet {
@@ -26,11 +29,23 @@ public class Login extends HttpServlet {
         response.setContentType("text/html");// eu estou setando de que forma ele vai me responder ( em texto html ) 
         PrintWriter out = response.getWriter(); // escreve no html, fazendo o get do que será escrito 
                 
-        if("admin".equals(usuario)&& "1234".equals(senha)){
-            response.sendRedirect("dashBoard.html");// direciona para a pagina
-            //out.println("<h2>Login realizado</h2>");
-        }else{
-            out.println("<h2>Usuario ou senha incorretos</h2>");
+        try (var con = ConectionFactory.getConnection()){
+            String sql = "SELECT * FROM users WHERE username= ? AND psw= ?";
+            
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setString(1, usuario);
+            stmt.setString(2,senha);
+            
+            ResultSet rs = stmt.executeQuery(); 
+            if(rs.next()){
+                response.sendRedirect("Pages/dashBoard.html");
+                        
+            }else{
+                out.println("<h2>Usuario ou senha invalidos</h2>");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            out.println("<h2>Erro ao conectar com o banco de dados</h2>");
         }
         
     }
