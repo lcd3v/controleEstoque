@@ -1,24 +1,19 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
 <html>
     <head>
-        <link rel="stylesheet" href="css/reset.css"/>
-        <link rel="stylesheet" href="css/color.css"/>
-        <link rel="stylesheet" href="css/dashboard.css"/>
-        <title>TOSO supply a tittle</title>
+        <link rel="stylesheet" href="..css/reset.css"/>
+        <link rel="stylesheet" href="..css/color.css"/>
+        <link rel="stylesheet" href="..css/dashboard.css"/>
+        <title>EstoqueFácil</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/reset.css"/>
     </head>
     <body>
         <header id="header">
-            <h1 id="tituloDashboard">Sistema de Estoque</h1>
+            <h1 id="tituloDashboard">Controle de Estoque</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Início</a></li>
                     <li><a href="#">Gerenciamento</a></li>
                 </ul>
             </nav>
@@ -44,9 +39,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <input type="date" >
                 </div>
                 <div class="grupo-filtro">
-                    <label for="filtroTipo">Tipo</label>
+                    <label for="tipoMovimentacao">Tipo</label>
                     <select id="tipoMovimentacao" class="select-filtro">
-                        <option>Selecione uma opção</option>
+                        <option value="">Selecione uma opção</option>
                         <option value="entrada">Entrada</option>
                         <option value="saida">Saída</option>
                     </select>
@@ -79,15 +74,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                                 <td>Mouse</td>
                                 <td>Logitech</td>
                                 <td>Mx</td>
-                                <td>15</td>
+                                <td>10</td>
                                 <td>R$150,00</td>
-                                <td>R$2.250,00</td>
+                                <td>R$1.500,00</td>
                             </tr>
                             <tr class="linha-item">
                                 <td>987654321</td>
                                 <td>Teclado</td>
                                 <td>Logitech</td>
-                                <td>MxC</td>
+                                <td>MXC</td>
                                 <td>10</td>
                                 <td>R$300,00</td>
                                 <td>R$3.000,00</td>
@@ -98,7 +93,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             </section>
             <section id="paginacao">
                 <div class="controle-paginacao">
-                    <label for="pagina">Pagina</label>
+                    <label for="pagina">Página</label>
                     <select id="pagina">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -106,7 +101,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         <option value="4">4</option>
                     </select>
                 </div>
-                <div class="container-btn">
+                <div class="conteiner-btn">
                     <button id="btnVoltar" class="btn-voltar">Voltar</button>
                     <button id="btnProximo" class="btn-Proximo">Próximo</button>
                 </div>
@@ -114,4 +109,3 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         </main>
     </body>
 </html>
-<!-- ola __> 

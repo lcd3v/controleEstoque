@@ -1,15 +1,6 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 4 de mar. de 2026, 20:33:03
-    Author     : ideapad
-*/
-
 body {
     height: 100vh;
-    background: linear-gradient(150deg, var(--primary-dark), var(--primary-medium));
+    background-color: lightslategray;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,25 +8,29 @@ body {
 
 /*contaier principal*/
 .container {
-    background-color: var(--white);
-    padding: 40px;
-    width: 350px;
-    box-shadow: 0px 8px 25px var(--shadow-default);
-    border-radius: 10px;
+    position: relative;
+    width: 420px;
+    background-color: rgba(0, 0, 0, 0.178);
+    border: none;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px 10px;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    padding: 40px 50px;
 }
 
 /* Titulo */
 .container h1 {
     text-align: center;
-    margin-bottom: 20px;
-    color: var(--gray-dark);
+    font-size: 36px;
+    font-weight: 900;
+    margin: 0 0 25px 0;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: var(--gray-dark);
+    color: white;
 }
 
 input {
