@@ -11,8 +11,8 @@ public class CadastroUsuarioModel {
     private String email;
     private String telefone;
     private String cpf;
-    private long cep;
-    private String endereço;
+    private String cep;
+    private String endereco;
     private String estado;
     private String bairro;
     private String cidade;
@@ -86,20 +86,20 @@ public class CadastroUsuarioModel {
         this.cpf = cpf;
     }
 
-    public long getCep() {
+    public String getCep() {
         return cep;
     }
 
-    public void setCep(long cep) {
+    public void setCep(String cep) {
         this.cep = cep;
     }
 
-    public String getEndereço() {
-        return endereço;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setEndereço(String endereço) {
-        this.endereço = endereço;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     public String getEstado() {
