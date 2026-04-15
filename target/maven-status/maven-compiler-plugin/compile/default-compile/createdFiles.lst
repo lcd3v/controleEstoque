@@ -1,0 +1,11 @@
+com\mycompany\systemstock\resources\JakartaEE11Resource.class
+controller\LoginServlet.class
+model\ProdutoModel.class
+connection\ConnectionFactory.class
+com\mycompany\systemstock\JakartaRestConfiguration.class
+model\UserModel.class
+controller\CadastroController.class
+dao\UserDAO.class
+dao\CadastroUsersDAO.class
+model\CadastroUsuarioModel.class
+model\CadastroProdutoModel.class
