@@ -2,7 +2,10 @@ C:\projetos.ds\controleEstoque\src\main\java\com\mycompany\systemstock\JakartaRe
 C:\projetos.ds\controleEstoque\src\main\java\com\mycompany\systemstock\resources\JakartaEE11Resource.java
 C:\projetos.ds\controleEstoque\src\main\java\connection\ConnectionFactory.java
 C:\projetos.ds\controleEstoque\src\main\java\controller\CadastroController.java
+C:\projetos.ds\controleEstoque\src\main\java\controller\CadastroProdutosController.java
+C:\projetos.ds\controleEstoque\src\main\java\controller\EstoqueController.java
 C:\projetos.ds\controleEstoque\src\main\java\controller\LoginServlet.java
+C:\projetos.ds\controleEstoque\src\main\java\dao\CadastroProdutosDAO.java
 C:\projetos.ds\controleEstoque\src\main\java\dao\CadastroUsersDAO.java
 C:\projetos.ds\controleEstoque\src\main\java\dao\UserDAO.java
 C:\projetos.ds\controleEstoque\src\main\java\model\CadastroProdutoModel.java

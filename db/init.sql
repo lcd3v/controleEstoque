@@ -23,6 +23,20 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+create table produtos (
+    id INT auto_increment primary key,
+    codigo_barras varchar(100) not null,
+    nome_produto varchar(255) not null,
+    fabricante varchar(255),
+    marca varchar(255),
+    data_fabricacao DATE,
+    data_vencimento DATE,
+    quantidade BIGINT,
+    valor DECIMAL(10,2),
+    total DECIMAL(10,2),
+    status varchar(255)
+);
+
 INSERT INTO users (
     username, psw, nameFirst, sobrenome, matricula, cpf, sexo, data_nascimento, email, telefone, funcao, cep, endereco, numero, bairro, cidade, estado, complemento) 
 VALUES (

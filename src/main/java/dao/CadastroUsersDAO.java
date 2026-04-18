@@ -9,7 +9,7 @@ public class CadastroUsersDAO {
     public boolean cadastrar(CadastroUsuarioModel user) {
         String sql = "INSERT INTO users "
                 + "(username, psw, nameFirst, sobrenome, matricula, cpf, sexo, data_nascimento, email, telefone, funcao, cep, endereco, numero, bairro, cidade, estado, complemento) "
-                + "VALUE (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try (var con = ConnectionFactory.getConnection()) {
 
