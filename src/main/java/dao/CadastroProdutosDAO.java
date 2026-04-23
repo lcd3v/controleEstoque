@@ -12,8 +12,8 @@ import model.CadastroProdutoModel;
 public class CadastroProdutosDAO {
     public boolean salvar(CadastroProdutoModel produto) {
         String sql = "INSERT INTO produtos" +
-                "(codigo_barras, nome_produto, fabricante, marca, data_fabricacao, data_vencimento, quantidade, valor, total)" +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "(codigo_barras, nome_produto, fabricante, marca, data_fabricacao, data_vencimento, quantidade, valor, total, status)" +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         
         try(Connection conn = ConnectionFactory.getConnection();
             PreparedStatement stmt = conn.prepareStatement (sql)) {
@@ -56,6 +56,8 @@ public class CadastroProdutosDAO {
                 p.setNomeProduto(rs.getString("nome_produto"));
                 p.setFabricante(rs.getString("fabricante"));
                 p.setMarca(rs.getString("marca"));
+                p.setDatafabricacao(rs.getDate("data_fabricacao").toLocalDate().toString());
+                p.setDataVencimento(rs.getDate("data_vencimento").toLocalDate().toString());
                 p.setQuantidade(rs.getLong("quantidade"));
                 p.setValor(rs.getString("valor"));
                 p.setTotal(rs.getString("total"));

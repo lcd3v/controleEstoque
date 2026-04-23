@@ -21,6 +21,10 @@ public class CadastroUsuarioModel {
     private String nomeUsuario;
     private String senha;
     private String funcao;
+    
+    public CadastroUsuarioModel(){
+        
+    }
 
     public String getNome() {
         return nome;

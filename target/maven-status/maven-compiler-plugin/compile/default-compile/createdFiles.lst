@@ -1,4 +1,7 @@
 com\mycompany\systemstock\resources\JakartaEE11Resource.class
+dao\CadastroProdutosDAO.class
 controller\LoginServlet.class
+model\ProdutoModel.class
 controller\CadastroController.class
+controller\EstoqueController.class
 model\CadastroProdutoModel.class

@@ -5,6 +5,7 @@ C:\projetos.ds\controleEstoque\src\main\java\controller\CadastroController.java
 C:\projetos.ds\controleEstoque\src\main\java\controller\CadastroProdutosController.java
 C:\projetos.ds\controleEstoque\src\main\java\controller\EstoqueController.java
 C:\projetos.ds\controleEstoque\src\main\java\controller\LoginServlet.java
+C:\projetos.ds\controleEstoque\src\main\java\controller\ResumoEstoqueController.java
 C:\projetos.ds\controleEstoque\src\main\java\dao\CadastroProdutosDAO.java
 C:\projetos.ds\controleEstoque\src\main\java\dao\CadastroUsersDAO.java
 C:\projetos.ds\controleEstoque\src\main\java\dao\UserDAO.java
@@ -12,3 +13,4 @@ C:\projetos.ds\controleEstoque\src\main\java\model\CadastroProdutoModel.java
 C:\projetos.ds\controleEstoque\src\main\java\model\CadastroUsuarioModel.java
 C:\projetos.ds\controleEstoque\src\main\java\model\ProdutoModel.java
 C:\projetos.ds\controleEstoque\src\main\java\model\UserModel.java
+C:\projetos.ds\controleEstoque\src\main\java\util\SenhaUtil.java
