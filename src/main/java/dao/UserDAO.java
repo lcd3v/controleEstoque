@@ -12,7 +12,7 @@ import util.SenhaUtil;
 
 public class UserDAO {
 
-    public boolean validarLogin(UserModel userModel) {
+    public UserModel validarLogin(UserModel userModel) {
         String sql = "SELECT * FROM users WHERE username = ?";
         try (var con = ConnectionFactory.getConnection()) {
             PreparedStatement stmt
@@ -24,17 +24,26 @@ public class UserDAO {
             if (rs.next()) {
                 String hashBanco = rs.getString("psw");
 
-                return SenhaUtil.verificarSenha(
-                        userModel.getPassword(),
+                boolean senhaValida = SenhaUtil.verificarSenha(
+                        userModel.getPassword(), 
                         hashBanco
                 );
+                
+                if(senhaValida) {
+                    UserModel user = new UserModel();
+                    user.setUsername(rs.getString("username"));
+                    user.setPassword(hashBanco);
+                    user.setFuncao(rs.getString("funcao"));
+                    
+                    return user;
+                }
             }
-
-            return false;
-
+            
+            return null;
+            
         } catch (Exception e) {
             e.printStackTrace();
-            return false;
+            return null;
         }
     }
 }

@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import model.CadastroUsuarioModel;
+import util.SenhaUtil;
 
 @WebServlet("/cadastro")
 public class CadastroController extends HttpServlet {

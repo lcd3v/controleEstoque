@@ -9,9 +9,18 @@ public class UserModel {
     private int id;
     private String username;
     private String password;
+    private String funcao;
     
     public UserModel() {
         
+    }
+    
+    public int getId() {
+        return id;
+    }
+    
+    public void setId (int id) {
+        this.id = id;
     }
     
      public String getUsername() {
@@ -26,6 +35,14 @@ public class UserModel {
     }
     public void setPassword(String password){
         this.password = password;
+    }
+    
+    public String getFuncao() {
+        return funcao;
+    }
+
+    public void setFuncao(String funcao) {
+        this.funcao = funcao;
     }
 
 }
